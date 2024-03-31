@@ -5,26 +5,55 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Lista de Serviços</title>
+    <meta charset="UTF-8">
+    <title>Lista de Serviços</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #dddddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: gray;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+    </style>
 </head>
 <body>
     <% 
         List<Service> services = (List<Service>) request.getAttribute("services");
     %>
-    <table border="1">
-        <tr>
-            <th>Nome</th>
-            <th>Descrição</th>
-            <th>id</th>
-            <th></th>
-        </tr>
-         <tbody>
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Descrição</th>
+                <th>Detalhes</th>
+            </tr>
+        </thead>
+        <tbody>
             <% for(Service item: services) { %>
                 <tr>
                     <td><%= item.getName() %></td>
                     <td><%= item.getDescription() %></td>
-                    <td><%= item.getId() %></td>
+                    <td>
+    					<a href="outra_pagina.jsp?id=<%= item.getId() %>">Ver mais</a>
+					</td>
                 </tr>
             <% } %>
         </tbody>
