@@ -7,11 +7,21 @@ public class Session {
 	private String id;
 	private Date date;
 	private LocalTime time;
-	private String sessionId;
+	private String serviceId;
 	
 	public Session() {
 	}
 	
+	public Session(String id, Date date, LocalTime time, String serviceId) {
+		super();
+		this.id = id;
+		this.date = date;
+		this.time = time;
+		this.serviceId = serviceId;
+	}
+
+
+
 	public String getId() {
 		return id;
 	}
@@ -30,11 +40,11 @@ public class Session {
 	public void setTime(LocalTime time) {
 		this.time = time;
 	}
-	public String getSessionId() {
-		return sessionId;
+	public String getServiceId() {
+		return serviceId;
 	}
-	public void setSessionId(String sessionId) {
-		this.sessionId = sessionId;
+	public void setServiceId(String serviceId) {
+		this.serviceId = serviceId;
 	}
 	
 }

@@ -43,6 +43,11 @@
             <label>Descrição:</label>
             <%= ((Service)request.getAttribute("service")).getDescription() %>
         </div>
+        <div class="service-detail">
+            <label>Preço:</label>
+            <%= ((Service)request.getAttribute("service")).getPrice() %>
+        </div>
+        <button type="button" onclick="window.location.href='${pageContext.request.contextPath}/service/addSession.jsp'">Agendar</button>
     </div>
 </body>
 </html>

@@ -67,8 +67,8 @@ public class InMemoryRepositoryService implements Repository<Service> {
     }
     
     private void initializeServiceList() {
-        serviceList.add(new Service("1", "Serviço 1", "Corte de cabelo"));
-        serviceList.add(new Service("2", "Serviço 2", "Corte de cabelo com barba"));
-        serviceList.add(new Service("2", "Serviço 2", "Manicure e pedicure"));
+        serviceList.add(new Service("1", "Serviço 1", "Corte de cabelo", 50.00));
+        serviceList.add(new Service("2", "Serviço 2", "Corte de cabelo com barba",80.00));
+        serviceList.add(new Service("2", "Serviço 2", "Manicure e pedicure", 65.00));
     }
 }
