@@ -10,6 +10,13 @@ public class Service {
 		
 	}
 	
+	public Service(String id, String name, String description) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.description = description;
+	}
+
 	public String getId() {
 		return id;
 	}

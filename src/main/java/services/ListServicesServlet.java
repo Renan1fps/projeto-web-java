@@ -22,15 +22,9 @@ public class ListServicesServlet extends HttpServlet {
 
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		Service service = new Service();
-		service.setDescription("Testes");
-		service.setId("1");
-		service.setName("Testessss");
-		InMemoryRepositoryService serviceRepo = new InMemoryRepositoryService();
-		serviceRepo.save(service);
-		List<Service> services = serviceRepo.fidAllById();
+		InMemoryRepositoryService serviceRepo = InMemoryRepositoryService.getInstance();
+		List<Service> services = serviceRepo.fidAll();
 		        request.setAttribute("services", services);
-
 		        request.getRequestDispatcher("service/listServices.jsp").forward(request, response);
 	}
 

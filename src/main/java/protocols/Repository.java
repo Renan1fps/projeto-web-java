@@ -8,6 +8,6 @@ public interface Repository<T> {
 	T getById(String id);
 	void delete(String id);
 	T updateById(String id, T data);
-	List<T> fidAllById();
+	List<T> fidAll();
 
 }

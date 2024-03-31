@@ -52,7 +52,8 @@
                     <td><%= item.getName() %></td>
                     <td><%= item.getDescription() %></td>
                     <td>
-    					<a href="outra_pagina.jsp?id=<%= item.getId() %>">Ver mais</a>
+    					<a href="/teste/viewService?id=<%= item.getId() %>">Ver mais</a>
+    					<a href="outra_pagina.jsp?id=<%= item.getId() %>">Excluir</a>
 					</td>
                 </tr>
             <% } %>
